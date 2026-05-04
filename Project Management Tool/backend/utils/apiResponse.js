@@ -52,6 +52,6 @@ class ApiResponse {
       errors,
     });
   }
-};
+}
 
 module.exports = ApiResponse;
