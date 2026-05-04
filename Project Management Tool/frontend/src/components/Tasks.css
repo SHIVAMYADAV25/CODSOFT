@@ -1,0 +1,138 @@
+/* PAGE TITLE */
+.page-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  margin-bottom: var(--space-6);
+}
+
+/* TASK LIST */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* TASK CARD */
+.task-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  transition: all 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border);
+}
+
+/* HEADER */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* TITLE */
+.task-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* DELETE BUTTON */
+.task-delete {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.task-delete:hover {
+  color: #dc2626;
+}
+
+/* META (badges row) */
+.task-meta {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: 8px;
+}
+
+/* PROJECT NAME */
+.task-project {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 6px;
+}
+
+/* BADGES */
+.badge {
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* STATUS COLORS */
+.badge--todo {
+  background: rgba(148, 163, 184, 0.2);
+  color: #475569;
+}
+
+.badge--in-progress {
+  background: rgba(59, 130, 246, 0.2);
+  color: #2563eb;
+}
+
+.badge--done {
+  background: rgba(16, 185, 129, 0.2);
+  color: #059669;
+}
+
+/* PRIORITY COLORS */
+.badge--low {
+  background: rgba(34, 197, 94, 0.2);
+  color: #16a34a;
+}
+
+.badge--medium {
+  background: rgba(234, 179, 8, 0.2);
+  color: #ca8a04;
+}
+
+.badge--high {
+  background: rgba(239, 68, 68, 0.2);
+  color: #dc2626;
+}
+
+/* ACTIONS */
+.task-actions {
+  margin-top: var(--space-3);
+}
+
+.task-actions select {
+  width: 100%;
+  padding: 6px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-light);
+  background: var(--color-bg);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.task-actions select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+/* EMPTY STATE */
+.task-empty {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: var(--space-6);
+}

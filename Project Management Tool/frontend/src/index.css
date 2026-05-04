@@ -1,0 +1,196 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Warm amber-terracotta palette — dim, editorial, not harsh */
+  --color-bg: #F5F0E8;
+  --color-bg-alt: #EDE8DE;
+  --color-surface: #FAF7F2;
+  --color-surface-alt: #F0EBE1;
+  --color-border: #D9D0C0;
+  --color-border-light: #E8E2D6;
+
+  /* Accent — warm terracotta */
+  --color-accent: #C8622A;
+  --color-accent-light: #E8814E;
+  --color-accent-muted: #F2C4A8;
+  --color-accent-bg: #FBF0E8;
+
+  /* Text */
+  --color-text: #2A2318;
+  --color-text-secondary: #6B5E4E;
+  --color-text-muted: #9C8C7C;
+  --color-text-inverse: #FAF7F2;
+
+  /* Status colors (muted) */
+  --color-success: #4A7C59;
+  --color-success-bg: #EBF3EE;
+  --color-warning: #9B7A2A;
+  --color-warning-bg: #F7F0DC;
+  --color-danger: #8B3A3A;
+  --color-danger-bg: #F5EAEA;
+  --color-info: #2A5A8B;
+  --color-info-bg: #E8F0F8;
+
+  /* Priority colors */
+  --priority-low: #4A7C59;
+  --priority-medium: #9B7A2A;
+  --priority-high: #C8622A;
+  --priority-critical: #8B3A3A;
+
+  /* Typography */
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(42, 35, 24, 0.08);
+  --shadow-md: 0 4px 12px rgba(42, 35, 24, 0.10);
+  --shadow-lg: 0 8px 28px rgba(42, 35, 24, 0.12);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+
+  /* Sidebar */
+  --sidebar-width: 260px;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover { color: var(--color-accent-light); }
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+  outline: none;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+  outline: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-16px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.fade-in { animation: fadeIn 0.3s ease both; }
+.slide-in { animation: slideIn 0.3s ease both; }
+
+/* App Layout */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  flex: 1;
+  padding: var(--space-8);
+  max-width: 1400px;
+}
+
+/* Utility classes */
+.text-muted { color: var(--color-text-muted); }
+.text-secondary { color: var(--color-text-secondary); }
+.font-display { font-family: var(--font-display); }
+.font-heading { font-family: var(--font-heading); }
+
+.skeleton {
+  background: linear-gradient(90deg, var(--color-bg-alt) 25%, var(--color-border-light) 50%, var(--color-bg-alt) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-bg);
+}

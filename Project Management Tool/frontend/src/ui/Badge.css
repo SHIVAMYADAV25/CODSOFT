@@ -1,0 +1,26 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge--neutral { background: var(--color-bg-alt); color: var(--color-text-secondary); }
+.badge--success { background: var(--color-success-bg); color: var(--color-success); }
+.badge--warning { background: var(--color-warning-bg); color: var(--color-warning); }
+.badge--danger  { background: var(--color-danger-bg);  color: var(--color-danger); }
+.badge--info    { background: var(--color-info-bg);    color: var(--color-info); }
+
+.badge--priority-low      { background: var(--color-success-bg); color: var(--priority-low); }
+.badge--priority-medium   { background: var(--color-warning-bg); color: var(--priority-medium); }
+.badge--priority-high     { background: #FDF0E8; color: var(--priority-high); }
+.badge--priority-critical { background: var(--color-danger-bg);  color: var(--priority-critical); }
+
+.badge--size-sm { padding: 2px 7px; font-size: 0.6875rem; }
+.badge--size-lg { padding: 5px 14px; font-size: 0.8125rem; }

@@ -1,0 +1,18 @@
+.app-layout {
+  display: flex;
+  height: 100vh;
+  background: var(--color-bg);
+}
+
+/* Sidebar already fixed width */
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+/* Main content */
+.app-main {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-8);
+}
