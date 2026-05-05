@@ -1,0 +1,13 @@
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  REACT_APP_API_URL = "https://your-backend-api.onrender.com/api"
+  REACT_APP_STRIPE_PUBLIC_KEY = "pk_test_your_stripe_key"

@@ -1,0 +1,100 @@
+.page { padding: 80px 0 120px; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 24px; text-align: center; }
+
+.icon { color: var(--sage); margin-bottom: 20px; display: flex; justify-content: center; }
+
+.title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+}
+
+.sub { font-size: 16px; color: var(--ash); margin-bottom: 40px; }
+
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--parchment);
+  padding: 32px;
+  text-align: left;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-card);
+}
+
+.orderMeta {
+  display: flex;
+  gap: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--parchment);
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.metaLabel { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ash); margin-bottom: 4px; }
+.metaValue { font-size: 15px; font-weight: 500; color: var(--charcoal); display: block; }
+.statusBadge {
+  text-transform: capitalize;
+  background: var(--cream-dark);
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--charcoal-light);
+  display: inline-block;
+}
+
+.items { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+.item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--cream-dark);
+}
+.itemImg { width: 52px; height: 52px; border-radius: var(--radius); object-fit: cover; background: var(--cream); flex-shrink: 0; }
+.itemName { font-size: 14px; font-weight: 500; color: var(--charcoal); margin-bottom: 3px; }
+.itemDetails { font-size: 13px; color: var(--ash); }
+.itemTotal { margin-left: auto; font-size: 14px; font-weight: 500; color: var(--charcoal); }
+
+.shipping {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ash);
+  background: var(--cream);
+  padding: 10px 14px;
+  border-radius: var(--radius);
+}
+.shipping svg { color: var(--bark); flex-shrink: 0; }
+
+.actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+.ordersBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--charcoal);
+  color: var(--cream);
+  padding: 13px 24px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background var(--transition);
+}
+.ordersBtn:hover { background: var(--charcoal-light); }
+
+.shopBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 24px;
+  border: 1px solid var(--sand-light);
+  border-radius: var(--radius);
+  font-size: 14px;
+  color: var(--charcoal);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+.shopBtn:hover { border-color: var(--charcoal); background: var(--cream); }

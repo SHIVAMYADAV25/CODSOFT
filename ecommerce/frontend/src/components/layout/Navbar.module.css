@@ -1,0 +1,221 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--parchment);
+}
+
+.topBar {
+  background: var(--charcoal);
+  color: var(--sand-light);
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  padding: 8px 16px;
+  font-family: 'DM Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+.nav { background: var(--warm-white); }
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoMark {
+  font-size: 20px;
+  color: var(--ember);
+}
+
+.logoText {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--charcoal);
+  letter-spacing: 0.04em;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+  flex: 1;
+  justify-content: center;
+}
+
+.navLink {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ash);
+  transition: color var(--transition);
+  text-decoration: none;
+}
+
+.navLink:hover { color: var(--charcoal); }
+
+.activeLink {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--ember);
+  padding-bottom: 2px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.iconBtn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--charcoal-light);
+  transition: color var(--transition);
+  border-radius: var(--radius);
+}
+.iconBtn:hover { color: var(--charcoal); }
+
+.cartBtn {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--charcoal-light);
+  transition: color var(--transition);
+}
+.cartBtn:hover { color: var(--charcoal); }
+
+.badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: var(--ember);
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userMenu {
+  position: relative;
+}
+.userMenu:hover .dropdown { display: flex; }
+
+.dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid var(--parchment);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-hover);
+  min-width: 180px;
+  padding: 8px;
+  z-index: 200;
+}
+
+.dropdownUser {
+  padding: 8px 12px 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ash);
+  border-bottom: 1px solid var(--parchment);
+  margin-bottom: 4px;
+}
+
+.dropdownItem {
+  display: block;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: var(--charcoal);
+  border-radius: var(--radius);
+  text-align: left;
+  width: 100%;
+  transition: background var(--transition);
+  text-decoration: none;
+}
+.dropdownItem:hover { background: var(--cream); }
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--sand-light);
+  border-radius: var(--radius);
+  padding: 4px 8px;
+}
+
+.searchInput {
+  font-size: 14px;
+  width: 200px;
+  color: var(--charcoal);
+  background: transparent;
+}
+.searchInput::placeholder { color: var(--ash-light); }
+
+.mobileMenu {
+  display: none;
+  color: var(--charcoal);
+  padding: 6px;
+}
+
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  background: var(--warm-white);
+  border-top: 1px solid var(--parchment);
+  padding: 16px 24px 24px;
+  gap: 4px;
+}
+
+.mobileLink {
+  display: block;
+  padding: 10px 8px;
+  font-size: 15px;
+  color: var(--charcoal);
+  border-bottom: 1px solid var(--cream-dark);
+  text-decoration: none;
+  text-align: left;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navLinks { display: none; }
+  .mobileMenu { display: flex; }
+  .mobileNav { display: flex; }
+  .searchForm { display: none; }
+}
